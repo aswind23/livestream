@@ -1,0 +1,25 @@
+<div class="user-action" *ngIf="categories">
+	<div class="close">
+		<button><i class="fa fa-times" aria-hidden="true"></i></button>
+	</div>
+	<div class="dropdown">
+		<select [(ngModel)] = "category" (ngModelChange)="categoryChanged(category,$event)">
+		<option *ngFor = "let dropdown of Dropdowns" [value] = "dropdown">
+            {{dropdown}}</option>
+		</select>
+	</div>
+	<div class="feed"><button><i class="fa fa-rss" aria-hidden="true"></i></button></div>
+</div>
+<div class="sub-category" *ngIf="!categories">
+	<div class="back">
+		<button (click)="backhandleClick($event)"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+	</div>
+	<div class="dropdown">
+		<select [(ngModel)] ="subcategory" (ngModelChange)="subcategoryChanged(subcategory,$event)">
+		<option *ngFor = "let dropdown of subDropdowns" [value] = "dropdown.Channel">
+            {{dropdown.Name}}</option>
+		</select>
+	</div>
+	<div class="feed"><button><i class="fa fa-rss" aria-hidden="true"></i></button></div>
+</div>
+<div id="player"></div>

@@ -1,0 +1,100 @@
+/* Add application styles & imports to this file! */
+*,*:before,*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clear{
+    zoom:1}
+.clear:before,.clear:after{
+    content:" ";
+    display:table;}
+.clear:after{
+    clear:both;}
+html,body,header,footer,section,div,span,nav,ul,ul li,a,h1,h2,h3,strong,p{
+    margin: 0px;padding: 0px;border: 0px none;
+    vertical-align: baseline; top:0px;left:0px;bottom:0px;
+    right:0px;position:relative;
+}
+html,body{
+    width:100%;height:100%;
+    font-family: 'Open Sans', sans-serif;
+}
+a,p,h2{
+    text-decoration: none;
+    font-family:'Montserrat',serif;
+}
+ul{
+    list-style: none;
+}
+body{
+	margin: 0;
+	padding:0;
+}
+my-app{
+	width:100%;
+	height: 100%;
+	display: block;
+}
+app-jwplayer{
+	width:100%;
+	height: 100%;
+	display: block;
+}
+select{
+	width: 100%;
+	height: 40px;
+	padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	-webkit-appearance: none; 
+   -moz-appearance: none;
+    appearance: none;       /* remove default arrow */
+	background-color: #4a4947;
+    border: 1px solid rgb(89, 89, 89);
+    border-top: none;
+    color: white;
+    box-shadow: -5px -13px 19px rgba(27, 27, 27, 0.5686274509803921) inset;
+    font-style: normal;
+}
+select option{
+    padding: 10px;
+}
+.dropdown{
+	position: relative;
+}
+.dropdown:after{
+	content: "\f107";
+    display: inline-block;
+    font: normal normal normal 20px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 10px;
+    right: 26px;
+    color: white;
+    font-size: 21px;
+}
+app-jwplayer .jwplayer.jw-flag-aspect-mode{
+	width: 100%;
+	height: calc(100% - 40px) !important;
+}
+.user-action,.sub-category{
+	display: flex;
+}
+.dropdown{
+	width: 100%;
+}
+.user-action button,.sub-category button{
+	height: 40px;
+	width: 40px;
+	background-color: #4a4947;
+	box-shadow: -5px -13px 19px rgba(27, 27, 27, 0.5686274509803921) inset;
+	border:none;
+	border-bottom: 1px solid rgb(89, 89, 89);
+    cursor: pointer;
+}
+.user-action button i,.sub-category button i{
+	color: white;
+}
